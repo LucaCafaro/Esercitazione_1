@@ -16,9 +16,12 @@ class Complex{
   const Complex& operator*=(const Complex& rhs);
   const Complex& operator/=(const Complex& rhs);
 
+  //global function
+  friend Complex operator*(const double& lhs, const Complex& rhs);
+
   //getters
-  double getRe();
-  double getIm();
+  double getRe() const;
+  double getIm() const;
 
   //setters
   void setRe(double c);
@@ -38,5 +41,4 @@ class Complex{
   double im;
 };
 
-//global function
-Complex operator*(const double& lhs, Complex& rhs);
+

@@ -80,10 +80,15 @@ const Complex& Complex::operator/=(const Complex& rhs){
   }
 }
 
+//global function
+Complex operator*(const double& lhs, const Complex& rhs){
+  return Complex(lhs*rhs.getRe(), lhs*rhs.getIm());
+}
+
 
 //getters
-double Complex::getRe(){return re;}
-double Complex::getIm(){return im;}
+double Complex::getRe() const {return re;}
+double Complex::getIm() const {return im;}
 
 //setters
 void Complex::setRe(double c){re=c;}
@@ -113,7 +118,4 @@ double Complex::phi(){
 }
 /////////////////////////////////////////////////////////
 
-//global function
-Complex operator*(const double& lhs, Complex& rhs){
-  return Complex(lhs*rhs.getRe(), lhs*rhs.getIm() );
-}
+
