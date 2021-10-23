@@ -3,6 +3,7 @@ class Complex{
 
   //constructors
   Complex(double a, double b);
+  ~Complex();
 
   //overloaded Operators
   Complex operator+(const Complex& rhs) const;

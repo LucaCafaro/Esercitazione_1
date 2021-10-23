@@ -9,6 +9,9 @@ Complex::Complex(double a, double b){
   im=b;
 }
 
+Complex::~Complex(){
+}
+
 Complex Complex::operator+(const Complex& rhs) const{
   double re_=re+rhs.re;
   double im_=im+rhs.im;
